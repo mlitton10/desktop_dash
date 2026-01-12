@@ -1,27 +1,28 @@
 import tkinter as tk
 import ttkbootstrap as ttk
+from ttkbootstrap import Window
 from ttkbootstrap.constants import *
 from utils import get_screen_size
 
 
+class Dashboard(Window):
+    def __init__(self, themename='darkly'):
+        super().__init__(themename="darkly")
 
-class Dashboard:
-    def __init__(self):
-        root = ttk.Window(themename="darkly")
-        root.title("DesktopDash")
+        self.title("DesktopDash")
 
         screen_width, screen_height = get_screen_size()
 
-        root.geometry("{}x{}".format(int(screen_width*0.9), int(screen_height*0.9)))
+        self.geometry("{}x{}".format(int(screen_width * 0.9), int(screen_height * 0.9)))
 
-        w = tk.Label(root, text='Hello World')
-        w.pack()
-        button = tk.Button(root, text='Stop', width=25, command=root.destroy)
-        button.pack()
-        root.mainloop()
+        w = tk.Label(self, text='Hello World')
+        w.grid(row=0, column=0, padx=20, pady=20)
+        button = tk.Button(self, text='Stop', width=25, command=self.destroy)
+        button.grid(row=0, column=1, padx=20, pady=20)
 
         pass
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     desktop_dash = Dashboard()
+    desktop_dash.mainloop()
