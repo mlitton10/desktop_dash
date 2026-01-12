@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88573aee-a01f-49e0-9282-5486fe9ccf53" name="Changes" comment="Modify application sizing" />
+    <list default="true" id="88573aee-a01f-49e0-9282-5486fe9ccf53" name="Changes" comment="Add button frame">
+      <change afterPath="$PROJECT_DIR$/interface/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_service/base_api_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_service/base_api_handler.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +36,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.base_api_handler.executor": "Run",
     "Python.layout.executor": "Run",
+    "Python.utils.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
@@ -93,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768200006647</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add button frame">
+      <option name="closed" value="true" />
+      <created>1768200110984</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1768200110984</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -101,6 +116,7 @@
     <MESSAGE value="Add function to get the screen size and fit the root window" />
     <MESSAGE value="Make dashboard class" />
     <MESSAGE value="Modify application sizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify application sizing" />
+    <MESSAGE value="Add button frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add button frame" />
   </component>
 </project>
