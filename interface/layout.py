@@ -4,7 +4,6 @@ from ttkbootstrap import Window
 from ttkbootstrap.constants import *
 from utils import get_screen_size
 
-
 class Dashboard(Window):
     def __init__(self, themename='darkly'):
         super().__init__(themename="darkly")
