@@ -8,6 +8,7 @@ address_dict = {"My Home": "807 N Hudson Avenue, Los Angeles, California, United
                 "Cait's Home": "11 S Termino Avenue, Long Beach California United States",
                 "Work": "1000 Veteran Ave, Los Angeles, CA 90024"}
 
+
 def get_lat_long(addresses):
     geolocator = Nominatim(user_agent='your_app_name')
     coordinates = {}
@@ -32,6 +33,7 @@ def get_screen_size():
 
     root.destroy()  # Close the small Tkinter window that was created
     return screen_width, screen_height
+
 
 def handle_timestamp(timestamp):
     LosAngeles = timezone('America/Los_Angeles')

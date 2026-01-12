@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88573aee-a01f-49e0-9282-5486fe9ccf53" name="Changes" comment="Add button frame">
-      <change afterPath="$PROJECT_DIR$/interface/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="88573aee-a01f-49e0-9282-5486fe9ccf53" name="Changes" comment="Add weather api requests, locality management, timestamp management">
       <change beforePath="$PROJECT_DIR$/interface/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_service/base_api_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_service/base_api_handler.py" afterDir="false" />
     </list>
@@ -108,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768200110984</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add weather api requests, locality management, timestamp management">
+      <option name="closed" value="true" />
+      <created>1768206495016</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1768206495016</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -117,6 +123,7 @@
     <MESSAGE value="Make dashboard class" />
     <MESSAGE value="Modify application sizing" />
     <MESSAGE value="Add button frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add button frame" />
+    <MESSAGE value="Add weather api requests, locality management, timestamp management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add weather api requests, locality management, timestamp management" />
   </component>
 </project>

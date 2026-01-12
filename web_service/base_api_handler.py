@@ -14,7 +14,6 @@ class BaseRequest:
 
 class WeatherRequest(BaseRequest):
     def __init__(self, coords, n_days=7):
-        api_key = "e5d294f92b8b38cad7c5252af8b68a20"
 
         api_string = "http://api.openweathermap.org/data/2.5/forecast?lat={}&lon={}&cnt={}&appid={}".format(coords[0], coords[1], n_days, api_key)
 
@@ -32,6 +31,13 @@ class WeatherRequestManager():
             weather = WeatherRequest(coord)
             self.data_dict[location] = weather.data
 
+    def _format_json_data(self):
+        clean_data = {}
+        for location, data in self.data_dict.items():
+            clean_data[location] = data['list']
+
+            ("what data do I want:"
+             "Temp + min/max, clouds?, rain/precip chance, feels_like, wind, ")
 
 if __name__=="__main__":
     w = WeatherRequestManager()
