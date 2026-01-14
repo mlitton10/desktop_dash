@@ -4,11 +4,9 @@ from interface.utils import get_lat_long
 import pandas as pd
 
 class BaseRequest:
-    def __init__(self, url, app_name):
-        api_key = self._collect_keys(app_name)
-        print(url.format(api_key))
-        response = requests.get(url.format({api_key}))
-        print(f"Status Code: {response.status_code}")
+    def __init__(self, url):
+        response = requests.get(url)
+       # print(f"Status Code: {response.status_code}")
 
         self.data = response.json()
         pass
@@ -22,10 +20,8 @@ class BaseRequest:
 
 class WeatherRequest(BaseRequest):
     def __init__(self, coords, n_days=7):
-
-        api_string = "http://api.openweathermap.org/data/2.5/forecast?lat={}&lon={}&cnt={}&appid={{}}".format(coords[0], coords[1], n_days)
-
-        super().__init__(api_string, 'open_weather')
+        api_string = "https://api.weather.gov/points/{},{}".format(coords[0], coords[1])
+        super().__init__(api_string)
 
 class WeatherRequestManager():
     def __init__(self):
@@ -34,12 +30,17 @@ class WeatherRequestManager():
                         "Work": "1000 Veteran Ave, Los Angeles, CA 90024"}
 
         coords = get_lat_long(address_dict)
-        self.data_dict = {}
+        self.weather_api_strings = {}
         for location, coord in coords.items():
-            weather = WeatherRequest(coord)
-            self.data_dict[location] = weather.data
+            api_str_data = WeatherRequest(coord)
+            self.weather_api_strings[location] = api_str_data.data['properties']['forecast']
 
-    def _format_json_data(self):
+        self.weather_data = {}
+        for location, string in self.weather_api_strings.items():
+            api_data = BaseRequest(string)
+            self.weather_data[location] = api_data.data
+
+    def _collect_api_url(self):
         clean_data = {}
         for location, data in self.data_dict.items():
             clean_data[location] = data['list']
@@ -47,4 +48,6 @@ class WeatherRequestManager():
 
 if __name__=="__main__":
     w = WeatherRequestManager()
-    print(w.data_dict)
+    print(w.weather_data['My Home'].keys())
+
+    print(w.weather_data['My Home'].keys())

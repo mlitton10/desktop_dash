@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88573aee-a01f-49e0-9282-5486fe9ccf53" name="Changes" comment="Add weather api requests, locality management, timestamp management">
-      <change beforePath="$PROJECT_DIR$/interface/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/utils.py" afterDir="false" />
+    <list default="true" id="88573aee-a01f-49e0-9282-5486fe9ccf53" name="Changes" comment="add functionality to pull api key from file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_service/base_api_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_service/base_api_handler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,16 +32,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.base_api_handler.executor": "Run",
-    "Python.layout.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.base_api_handler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.layout.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -114,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768206495016</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add functionality to pull api key from file">
+      <option name="closed" value="true" />
+      <created>1768361847203</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1768361847203</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,6 +132,7 @@
     <MESSAGE value="Modify application sizing" />
     <MESSAGE value="Add button frame" />
     <MESSAGE value="Add weather api requests, locality management, timestamp management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add weather api requests, locality management, timestamp management" />
+    <MESSAGE value="add functionality to pull api key from file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add functionality to pull api key from file" />
   </component>
 </project>
