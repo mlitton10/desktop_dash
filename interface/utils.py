@@ -3,6 +3,8 @@ from geopy.geocoders import Nominatim
 from datetime import datetime
 from pytz import timezone
 import pytz
+import pandas as pd
+
 
 address_dict = {"My Home": "807 N Hudson Avenue, Los Angeles, California, United States",
                 "Cait's Home": "11 S Termino Avenue, Long Beach California United States",
@@ -45,5 +47,10 @@ def handle_timestamp(timestamp):
 
 
 if __name__ == "__main__":
-    coords = get_lat_long(address_dict)
-    print(coords)
+
+    keys = pd.read_csv('../keys.txt', delimiter=',')
+    print(keys)
+    app_name = 'open_weather'
+    print(keys.iloc[0])
+   # coords = get_lat_long(address_dict)
+   # print(coords)
