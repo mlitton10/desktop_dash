@@ -18,13 +18,14 @@ class Dashboard(Window):
         self.grid_columnconfigure((0, 1), weight=1)
         self.grid_rowconfigure(0, weight=1)
 
-        self.display_1 = WeatherDisplayFrame(self)
+        weather_dict = {'My Home': {'Temperature': '54', 'Precip': 0, 'Wind': 10}}
+        self.display_1 = WeatherDisplayFrame(self, weather_dict)
         self.display_1.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
 
-        self.display_2 = WeatherDisplayFrame(self)
+        self.display_2 = WeatherDisplayFrame(self, weather_dict)
         self.display_2.grid(row=0, column=1, padx=10, pady=(10, 0), sticky="nsew")
 
-        self.display_3 = WeatherDisplayFrame(self)
+        self.display_3 = WeatherDisplayFrame(self, weather_dict)
         self.display_3.grid(row=0, column=2, padx=10, pady=(10, 0), sticky="nsew")
 
         self.button = ttk.Button(self, text="my button", command=self.destroy)
