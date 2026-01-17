@@ -8,7 +8,7 @@ class WeatherDisplayFrame(ttk.Frame):
         super().__init__(master)
 
         title = ttk.Label(self, text=list(weather_dict.keys())[0], font=('Arial', 50), justify='center')
-        title.grid(row=0, column=0, padx=40, pady=10, sticky='ew')
+        title.grid(row=0, column=0, padx=40, pady=10, sticky='ew', columnspan=2)
 
         for i, (name, value) in enumerate(weather_dict[list(weather_dict.keys())[0]].items()):
             name_label = ttk.Label(self, text=name, justify='center')
