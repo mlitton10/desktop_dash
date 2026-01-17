@@ -18,6 +18,9 @@ class Dashboard(Window):
         self.grid_columnconfigure((0, 1), weight=1)
         self.grid_rowconfigure(0, weight=1)
 
+      #  self.title_text = ttk.Label(self, text="Weather Forecast", font=('Arial', 80), justify='center')
+       # self.title_text.grid(row=0, column=1, padx=0, pady=10, sticky='nsew', columnspan=3)
+
         weather_dict = {'My Home': {'Temperature': '54', 'Precip': 0, 'Wind': 10}}
         self.display_1 = WeatherDisplayFrame(self, weather_dict)
         self.display_1.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
@@ -28,7 +31,7 @@ class Dashboard(Window):
         self.display_3 = WeatherDisplayFrame(self, weather_dict)
         self.display_3.grid(row=0, column=2, padx=10, pady=(10, 0), sticky="nsew")
 
-        self.button = ttk.Button(self, text="my button", command=self.destroy)
+        self.button = ttk.Button(self, text="STOP", command=self.destroy)
         self.button.grid(row=3, column=0, padx=10, pady=10, sticky="ew", columnspan=3)
 
         pass
