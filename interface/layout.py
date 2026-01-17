@@ -3,7 +3,7 @@ import ttkbootstrap as ttk
 from ttkbootstrap import Window
 from ttkbootstrap.constants import *
 from utils import get_screen_size
-from widget import MyCheckboxFrame, WeatherDisplayFrame
+from widget import WeatherDisplayFrame
 
 class Dashboard(Window):
     def __init__(self, themename='darkly'):
@@ -27,9 +27,8 @@ class Dashboard(Window):
         self.display_3 = WeatherDisplayFrame(self)
         self.display_3.grid(row=0, column=2, padx=10, pady=(10, 0), sticky="nsew")
 
-
         self.button = ttk.Button(self, text="my button", command=self.destroy)
-        self.button.grid(row=3, column=0, padx=10, pady=10, sticky="ew", columnspan=2)
+        self.button.grid(row=3, column=0, padx=10, pady=10, sticky="ew", columnspan=3)
 
         pass
 
