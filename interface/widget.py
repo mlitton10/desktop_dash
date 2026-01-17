@@ -5,7 +5,7 @@ import ttkbootstrap as ttk
 
 class Panel(ttk.Frame):
     def __init__(self, master, panel_name):
-        super().__init__(master)
+        super().__init__(master, padding=(3,3,12,12))
 
         self.title_text = ttk.Label(self, text=panel_name, font=('Arial', 80))
         self.title_text.grid(row=0, column=1, padx=0, pady=0, sticky='nsew')

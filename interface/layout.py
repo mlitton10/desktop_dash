@@ -15,12 +15,13 @@ class Dashboard(Window):
 
         self.geometry("{}x{}".format(int(screen_width * 0.9), int(screen_height * 0.9)))
 
-        self.grid_columnconfigure((0, 1), weight=1)
-        self.grid_rowconfigure(0, weight=1)
+
+        self.grid_columnconfigure((0, 1,2), weight=1)
+        self.grid_rowconfigure((0,1,2), weight=1)
 
         weather_dict = {'My Home': {'Temperature': '54', 'Precip': 0, 'Wind': 10}}
         self.weather_panel = WeatherPanel(self, weather_dict)
-        self.weather_panel.grid(row=1, column=0, sticky='nsew', columnspan=3)
+        self.weather_panel.grid(row=1, column=1, sticky='nsew', columnspan=1)
 
         self.button = ttk.Button(self, text="STOP", command=self.destroy)
         self.button.grid(row=4, column=0, padx=10, pady=10, sticky="ew", columnspan=3)
