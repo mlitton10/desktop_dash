@@ -22,10 +22,10 @@ class Dashboard(Window):
         self.display_1.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
 
         self.display_2 = WeatherDisplayFrame(self)
-        self.display_2.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
+        self.display_2.grid(row=0, column=1, padx=10, pady=(10, 0), sticky="nsew")
 
         self.display_3 = WeatherDisplayFrame(self)
-        self.display_3.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
+        self.display_3.grid(row=0, column=2, padx=10, pady=(10, 0), sticky="nsew")
 
 
         self.button = ttk.Button(self, text="my button", command=self.destroy)
