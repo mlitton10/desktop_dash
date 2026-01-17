@@ -32,9 +32,9 @@ class WeatherDisplayFrame(ttk.Frame):
 
         for i, (name, value) in enumerate(weather_dict[list(weather_dict.keys())[0]].items()):
             name_label = ttk.Label(self, text=name)
-            name_label.grid(row=i, column=0, padx=10, pady=10, sticky='ew')
+            name_label.grid(row=i+1, column=0, padx=10, pady=10, sticky='ew')
 
             value_label = ttk.Label(self, text=value)
-            value_label.grid(row=i, column=1, padx=10, pady=10, sticky='ew')
+            value_label.grid(row=i+1, column=1, padx=10, pady=10, sticky='ew')
         pass
     pass
