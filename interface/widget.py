@@ -34,7 +34,7 @@ class WeatherDisplayFrame(ttk.Frame):
             name_label = ttk.Label(self, text=name)
             name_label.grid(row=i, column=0, padx=10, pady=10, sticky='ew')
 
-            value_label = ttk.Label(self, text=name)
+            value_label = ttk.Label(self, text=value)
             value_label.grid(row=i, column=1, padx=10, pady=10, sticky='ew')
         pass
     pass
