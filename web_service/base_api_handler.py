@@ -35,19 +35,28 @@ class WeatherRequestManager():
             api_str_data = WeatherRequest(coord)
             self.weather_api_strings[location] = api_str_data.data['properties']['forecast']
 
+        self.weather_data_json = {}
         self.weather_data = {}
         for location, string in self.weather_api_strings.items():
             api_data = BaseRequest(string)
-            self.weather_data[location] = api_data.data
+            self.weather_data_json[location] = api_data.data
+        self.weather_data = self._collect_weather_data()
 
-    def _collect_api_url(self):
-        clean_data = {}
-        for location, data in self.data_dict.items():
-            clean_data[location] = data['list']
+    def _collect_weather_data(self):
+        weather_data = {}
+        for location, data in self.weather_data_json.items():
+            temp = data['properties']['periods'][0]['temperature']
+            precip = data['properties']['periods'][0]['probabilityOfPrecipitation']['value']
+
+            timing = data['properties']['periods'][0]['name']
+            wind = data['properties']['periods'][0]['windSpeed']
+            summary = data['properties']['periods'][0]['shortForecast']
+
+            data_dict = {'timing': timing, 'temp': temp, 'precip': precip, 'wind': wind, 'summary':summary}
+            weather_data[location] = data_dict
+        return weather_data
 
 
 if __name__=="__main__":
     w = WeatherRequestManager()
-    print(w.weather_data['My Home'].keys())
-
-    print(w.weather_data['My Home'].keys())
+    print(w.weather_data)
